@@ -8,7 +8,7 @@ repeat task.wait(0.1) until (game:GetService("Players").LocalPlayer) and (game:G
 
 local SG = Instance.new("ScreenGui")
 SG.Parent = game:GetService("CoreGui")
-SG.Name = "Shh"
+SG.Name = "Shhh"
 SG.IgnoreGuiInset = true 
 local TL = Instance.new("TextLabel")
 TL.Parent = SG 
@@ -33,7 +33,7 @@ _G.Disable = function()
 	Dis = true
 	game:GetService("RunService"):Set3dRenderingEnabled(true)
 	setfpscap(60)
-	game:GetService("CoreGui").Shh:Destroy()
+	game:GetService("CoreGui").Shhh:Destroy()
 end
 
 Player.DevCameraOcclusionMode = Enum.DevCameraOcclusionMode.Invisicam
@@ -167,7 +167,7 @@ local StartCash = Player.DataFolder.Currency.Value
 task.spawn(function()
 	while true and task.wait(0.5) do 
 		print(TL.Text)
-		TL.Text = "autofarm fix - @wrdforme\n@"..Player.Name.."\n$"..tostring(Player.DataFolder.Currency.Value):reverse():gsub("...","%0,",math.floor((#tostring(Player.DataFolder.Currency.Value)-1)/3)):reverse().."\nATMS: "..tostring(Broken).."\n"..string.format("%02i:%02i:%02i", (os.time()-StartTick)/60^2, (os.time()-StartTick)/60%60, (os.time()-StartTick)%60).."\nProfit: $"..tostring(Player.DataFolder.Currency.Value-StartCash):reverse():gsub("...","%0,",math.floor((#tostring(Player.DataFolder.Currency.Value-StartCash)-1)/3)):reverse().."\n"..tostring(GetCashier()).."\navailable for free in gg/ABjG8DSA"
+		TL.Text = "autofarm fix - @wrdforme\n@"..Player.Name.."\n$"..tostring(Player.DataFolder.Currency.Value):reverse():gsub("...","%0,",math.floor((#tostring(Player.DataFolder.Currency.Value)-1)/3)):reverse().."\nATMS: "..tostring(Broken).."\n"..string.format("%02i:%02i:%02i", (os.time()-StartTick)/60^2, (os.time()-StartTick)/60%60, (os.time()-StartTick)%60).."\nProfit: $"..tostring(Player.DataFolder.Currency.Value-StartCash):reverse():gsub("...","%0,",math.floor((#tostring(Player.DataFolder.Currency.Value-StartCash)-1)/3)):reverse().."\n"..tostring(GetCashier()).."\nif you paid for this then youre\na retard and got scammed\navailable for free in gg/ABjG8DSA"
 	end
 end)
 
